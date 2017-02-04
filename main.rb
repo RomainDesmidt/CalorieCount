@@ -4,6 +4,16 @@ FOODS_LIST = []
 
 
 
+CSV.foreach("food.csv") do |row|
+  Intermediary_array << row
+end
+p Intermediary_array
+
+#Need a intermediary array to hash method to correctly put it in FOODS_LIST
+
+
+#to Reword
+
 def add_to_foods_list
   food_description = {}
   puts "Enter name / type / kcalper100gram"
@@ -16,18 +26,25 @@ def add_to_foods_list
 end
 
 
-
-#food_list << Food_Description
-#food_list = []
-
 var = add_to_foods_list
-
 p FOODS_LIST
 p var
-#Food_Description = {name: "Pear", type: "Fruit", kcalpergram: 0.57 }
-#Food_Description = {name: "Pear", type: "Fruit", kcalpergram: 0.57 }
-# Pear Fruit 57
 
+# Pear Fruit 57
+# Apple Fruit 52
+
+
+# to add implement a im going to eat x from food list, x gram, makes x calories,
+# save it in csv for later use with date
+
+#bio constant like metabolism kcal, proteine hydrocarbonate and fat ratio
+
+
+
+
+
+
+# possibly needed to make its into a method and or not erasing existing save
 CSV.open("food.csv", "wb") do |csv|
   FOODS_LIST.each do |food|
    csv << [food[:name], food[:kcalpergram], food[:type]]
