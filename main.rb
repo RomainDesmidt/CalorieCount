@@ -37,7 +37,7 @@ p var
 # to add implement a im going to eat x from food list, x gram, makes x calories,
 # save it in csv for later use with date
 
-#bio constant like metabolism kcal, proteine hydrocarbonate and fat ratio
+#bio constant like metabolism kcal, proteine carbohydrate and fat ratio
 
 
 
