@@ -1,16 +1,16 @@
 require "open-uri"
 require "csv"
 FOODS_LIST = []
-
-
+intermediary_array = []
 
 CSV.foreach("food.csv") do |row|
-  Intermediary_array << row
+  intermediary_array << row
 end
-p Intermediary_array
+p intermediary_array
 
-#Need a intermediary array to hash method to correctly put it in FOODS_LIST
+#Need an intermediary array to hash method to correctly put it in FOODS_LIST
 
+# simple operation to add, or delete food
 
 #to Reword
 
@@ -44,9 +44,17 @@ p var
 
 
 
-# possibly needed to make its into a method and or not erasing existing save
+# possibly needed to make it into a method and or not erasing existing save
+# create a timed name csv to create a backup
+CSV.open("food#{Time.now}.csv", "wb") do |csv|
+  FOODS_LIST.each do |food|
+   csv << [food[:name], food[:kcalpergram], food[:type]]
+   end
+end
+
 CSV.open("food.csv", "wb") do |csv|
   FOODS_LIST.each do |food|
    csv << [food[:name], food[:kcalpergram], food[:type]]
    end
 end
+
