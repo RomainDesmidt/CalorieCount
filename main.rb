@@ -32,6 +32,7 @@ p var
 
 # Pear Fruit 57
 # Apple Fruit 52
+# while loop with regexp on gets.chomp
 
 
 # to add implement a im going to eat x from food list, x gram, makes x calories,
@@ -57,4 +58,11 @@ CSV.open("food.csv", "wb") do |csv|
    csv << [food[:name], food[:kcalpergram], food[:type]]
    end
 end
+
+
+# suggestion de repas. gerer les ingredients utilise recemment et ceux non utilise depuis x
+# cuisine virtuelle (x conserves x fruits etc) gerer les dlc. gerer les courses
+# classification ingredients sucre ou sale / pret a manger ou travail necessaire
+
+
 
