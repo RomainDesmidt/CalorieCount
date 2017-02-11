@@ -8,4 +8,10 @@ class View
   def error_stdin
     puts "there was an error in computing information given please respect formating"
   end
+
+  def list_food_array(food_list_array)
+    food_list_array.each_with_index do |elem, index|
+      puts "#{index + 1}. #{elem.food_name} #{elem.food_calorieper1g}"
+    end
+  end
 end

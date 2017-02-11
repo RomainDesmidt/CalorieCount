@@ -11,9 +11,9 @@ require_relative "view"
 
 foodbook = Foodbook.new("food.csv")
 controller = Controller.new(foodbook)
-controller.create
+# controller.create
 # p foodbook.food_object
-
+controller.list
 # foodbook.create_food_save(pear)
 # foodbook.create_food_save(apple)
 # p foodbook.food_list

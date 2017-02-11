@@ -18,6 +18,11 @@ class Controller
     end
   end
 
+  def list
+    food_list_array =  @foodbook.food_list
+    @view.list_food_array(food_list_array)
+  end
+
   def delete
   end
 
