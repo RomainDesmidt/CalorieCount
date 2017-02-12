@@ -20,6 +20,7 @@ class Foodbook
 
   def delete_food_save(food_index)
     @food_list.delete_at(food_index)
+    save_into_csv
   end
 
   def list_food

@@ -14,4 +14,10 @@ class View
       puts "#{index + 1}. #{elem.food_name} #{elem.food_calorieper1g}"
     end
   end
+
+  def index_delete
+    puts "enter the number you want to delete"
+    print ">"
+    gets.chomp
+  end
 end

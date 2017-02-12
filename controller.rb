@@ -24,6 +24,9 @@ class Controller
   end
 
   def delete
+    list
+    index_to_delete = @view.index_delete.to_i
+    @foodbook.delete_food_save(index_to_delete - 1)
   end
 
 end
